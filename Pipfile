@@ -8,7 +8,9 @@ pylint = "*"
 flake8 = "*"
 
 [packages]
-jupyter = "*"
+natto-py = "*"
+bottle = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
