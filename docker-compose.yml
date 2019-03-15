@@ -5,10 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/python/Dockerfile
-    container_name: docker_template_python
+    container_name: morphological_analysis_api_container
     ports:
-      - "8888:8888"
-    volumes:
-      - ./source:/usr/src/source
-    env_file:
-      - ./.env
+      - "8080:80"
+    command: python -m bottle -b 0.0.0.0:80 main
