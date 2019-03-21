@@ -9,8 +9,8 @@ flake8 = "*"
 
 [packages]
 natto-py = "*"
-bottle = "*"
 gunicorn = "*"
+flask = "*"
 
 [requires]
 python_version = "3.6"
