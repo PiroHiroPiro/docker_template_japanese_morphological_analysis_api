@@ -1,4 +1,4 @@
-# Python + Pipenv + Docker + CircleCI Template
+# Morphological Analysis API Server on docker
 ## on local
 ### set up
 ```
@@ -8,12 +8,13 @@ $ pip install pipenv
 $ pipenv install --dev
 ```
 
-### run
+### run app
 ```
 $ cp .env.example .env
 $ vim .env
 $ pipenv shell
-$ python APP.PY
+$ cd source
+$ python app.py
 ```
 
 ## on docker container
@@ -22,16 +23,15 @@ $ python APP.PY
 $ docker-compose build
 ```
 
-### run jupyter notebook
+### run app
 ```
 $ docker-compose up
 ```
 
-### run bash
-after `run jupyter notebook`, start up at another terminal
+## API
+`GET /parse` with `q` param
 ```
-$ docker ps
-$ docker exec -it [CONTAINER ID] /bin/bash
+$ curl "http://localhost:8080/parse?q=きゃりーぱみゅぱみゅ"
 ```
 
 ## lint
