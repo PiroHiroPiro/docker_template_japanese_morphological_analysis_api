@@ -8,4 +8,4 @@ services:
     container_name: morphological_analysis_api_container
     ports:
       - "8080:80"
-    command: python -m bottle -b 0.0.0.0:80 main
+    command: python app.py
