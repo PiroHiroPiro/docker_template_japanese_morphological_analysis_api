@@ -20,7 +20,7 @@ else:
 @app.route("/parse", methods=['GET'])
 def index():
     result = {"result": []}
-    query = request.args.get("q", default=0, type=str)
+    query = request.args.get("q", default="", type=str)
     for line in tagger.parse(query).split("\n"):
         line = line.strip()
         parts = line.split("\t", 1)
