@@ -1,6 +1,6 @@
 # Japanese morphological analysis API server on docker
 
-This is a simple Japanese morphological analysis API server on docker.
+This is a simple Japanese morphological analysis API server on Docker.
 
 ## Requirement
 
