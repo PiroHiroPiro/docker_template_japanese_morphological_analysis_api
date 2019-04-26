@@ -5,7 +5,11 @@ services:
     build:
       context: .
       dockerfile: ./docker/python/Dockerfile
-    container_name: morphological_analysis_api_container
+    command: python app.py
+    container_name: japanese_morphological_analysis_api_container
+    environment:
+      - TZ=Japan
     ports:
       - "8080:80"
-    command: python app.py
+    volumes:
+      - ./source:/usr/src/source
