@@ -1,41 +1,45 @@
-# Morphological Analysis API Server on docker
-## on local
-### set up
-```
-$ cp .env.example .env
-$ vim .env
-$ pip install pipenv
-$ pipenv install --dev
-```
+# Japanese morphological analysis API server on docker
 
-### run app
-```
-$ cp .env.example .env
-$ vim .env
-$ pipenv shell
-$ cd source
-$ python app.py
-```
+This is a simple Japanese morphological analysis API server on docker.
 
-## on docker container
-### set up
-```
-$ docker-compose build
-```
+## Requirement
 
-### run app
-```
+- [docker](https://www.docker.com/)
+  - docker-compose
+
+## Usage
+
+Run API server:
+
+```console
 $ docker-compose up
 ```
 
-## API
 `GET /parse` with `q` param
-```
+```console
 $ curl "http://localhost:8080/parse?q=きゃりーぱみゅぱみゅ"
+
 ```
 
-## lint
+## Install
+
+Clone repository:
+
+```console
+$ git clone https://github.com/PiroHiroPiro/docker_template_morphological_analysis_api.git
+$ cd docker_template_morphological_analysis_api
 ```
-$ pipenv run pylint
-$ pipenv run flake
+
+Build image:
+
+```console
+$ docker-compose build
 ```
+
+## Licence
+
+This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_morphological_analysis_api/blob/master/LICENSE).
+
+## Author
+
+[Hiroyuki Nishizawa](https://github.com/PiroHiroPiro)
