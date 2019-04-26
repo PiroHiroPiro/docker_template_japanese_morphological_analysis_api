@@ -1,7 +1,6 @@
 FROM python:3.7
 
 ENV PYTHONUNBUFFERED=1
-ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y --fix-missing \
     && apt-get install -y --no-install-recommends \
@@ -15,6 +14,8 @@ RUN apt-get update -y --fix-missing \
     file \
     patch \
     locales
+
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "ja_JP.UTF-8 UTF-8" > /etc/locale.gen \
     && locale-gen ja_JP.UTF-8 \
