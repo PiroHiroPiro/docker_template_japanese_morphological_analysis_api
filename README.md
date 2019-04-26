@@ -4,7 +4,7 @@ This is a simple Japanese morphological analysis API server on Docker.
 
 ## Requirement
 
-- [docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
   - docker-compose
 
 ## Usage
