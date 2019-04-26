@@ -17,8 +17,25 @@ $ docker-compose up
 
 `GET /parse` with `q` param
 ```console
-$ curl "http://localhost:8080/parse?q=きゃりーぱみゅぱみゅ"
-
+$ curl -s -S --get --data-urlencode 'q=きゃりーぱみゅぱみゅ' http://localhost:8080/parse | jq .
+{
+  "result": [
+    {
+      "features": [
+        "名詞",
+        "固有名詞",
+        "人名",
+        "一般",
+        "*",
+        "*",
+        "きゃりーぱみゅぱみゅ",
+        "キャリーパミュパミュ",
+        "キャリーパミュパミュ"
+      ],
+      "surface": "きゃりーぱみゅぱみゅ"
+    }
+  ]
+}
 ```
 
 ## Install
