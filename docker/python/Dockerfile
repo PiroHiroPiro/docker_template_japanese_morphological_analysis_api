@@ -41,6 +41,6 @@ ENV PIPENV_VENV_IN_PROJECT=1
 
 COPY ./source/Pipfile ./
 
-RUN pip install --upgrade pip
-RUN pip install pipenv
-RUN pipenv install --skip-lock --system
+RUN pip install --upgrade pip \
+    && pip install pipenv \
+    && pipenv install --skip-lock --system
