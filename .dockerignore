@@ -1,3 +1,5 @@
-.mypy_cache/
-.venv/
-__pycache__/
+Pipfile.lock
+.venv
+.mypy_cache
+__pycache__
+.ipynb_checkpoints
