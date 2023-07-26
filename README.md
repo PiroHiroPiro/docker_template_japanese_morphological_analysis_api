@@ -11,12 +11,12 @@ This is a simple Japanese morphological analysis API server on Docker.
 
 Run API server:
 
-```console
+```shell
 $ docker-compose up
 ```
 
 `GET /parse` with `q` param
-```console
+```shell
 $ curl -s -S --get --data-urlencode 'q=きゃりーぱみゅぱみゅ' http://localhost:8080/parse | jq .
 {
   "result": [
@@ -42,14 +42,14 @@ $ curl -s -S --get --data-urlencode 'q=きゃりーぱみゅぱみゅ' http://lo
 
 Clone repository:
 
-```console
+```shell
 $ git clone https://github.com/PiroHiroPiro/docker_template_morphological_analysis_api.git
 $ cd docker_template_morphological_analysis_api
 ```
 
 Build image:
 
-```console
+```shell
 $ docker-compose build
 ```
 
